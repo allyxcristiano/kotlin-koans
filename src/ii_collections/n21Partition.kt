@@ -12,5 +12,6 @@ fun example8() {
 
 fun Shop.getCustomersWithMoreUndeliveredOrdersThanDelivered(): Set<Customer> {
     // Return customers who have more undelivered orders than delivered
+    this.customers.partition { it.orders.partition { it.isDelivered == true } }
     todoCollectionTask()
 }
