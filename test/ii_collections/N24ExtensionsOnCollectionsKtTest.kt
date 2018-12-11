@@ -6,7 +6,6 @@ import org.junit.Test
 class N24ExtensionsOnCollectionsKtTest {
     @Test
     fun testCollectionOfOneElement() {
-        doTest(listOf("a"), listOf("a"))
     }
 
     @Test
