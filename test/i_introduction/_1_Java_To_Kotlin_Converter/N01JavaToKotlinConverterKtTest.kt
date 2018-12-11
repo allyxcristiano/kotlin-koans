@@ -4,7 +4,8 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class N01JavaToKotlinConverterKtTest {
-    @Test fun collection() {
+    @Test
+    fun collection() {
         assertEquals("{1, 2, 3, 42, 555}", task1(listOf(1, 2, 3, 42, 555)))
     }
 }

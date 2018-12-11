@@ -10,14 +10,15 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class AdditionalTest {
-    @Test fun test() {
+    @Test
+    fun test() {
         invokeTests(
-                { N01JavaToKotlinConverterKtTest().collection() },
-                { N03DefaultArgumentsKtTest().testDefaultAndNamedParams() },
-                { N04LambdasKtTest().contains() },
-                { N07NullableTypesKtTest().everythingIsOk() },
-                { N08SmartCastsKtTest().testNum() },
-                { N24ExtensionsOnCollectionsKtTest().testCollectionOfOneElement() }
+            { N01JavaToKotlinConverterKtTest().collection() },
+            { N03DefaultArgumentsKtTest().testDefaultAndNamedParams() },
+            { N04LambdasKtTest().contains() },
+            { N07NullableTypesKtTest().everythingIsOk() },
+            { N08SmartCastsKtTest().testNum() },
+            { N24ExtensionsOnCollectionsKtTest().testCollectionOfOneElement() }
         )
         assertTrue("${JavaCode.set}", JavaCode.set.isEmpty())
     }
@@ -26,8 +27,8 @@ class AdditionalTest {
         for (test in tests) {
             try {
                 test()
+            } catch (e: NotImplementedException) {
             }
-            catch (e: NotImplementedException) {}
         }
     }
 }
