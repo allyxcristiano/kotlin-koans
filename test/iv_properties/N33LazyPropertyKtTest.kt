@@ -21,6 +21,5 @@ class N33LazyPropertyKtTest {
         lazyProperty.lazy
         lazyProperty.lazy
         assertEquals("Lazy property should be initialized once", 1, initialized)
-
     }
 }
